@@ -10,18 +10,19 @@
         .section-padding { padding: 80px 0; }
         .bg-light-gray { background-color: #f8f9fa; }
         
-        /* カスタムアクセントカラーの定義 */
-        .bg-accent { background-color: #C4FDFF; color: #333; } /* 背景色と、読みやすい文字色 */
+        /* ▼ メインのアクセントカラー (#8678FF) */
+        .bg-accent { background-color: #8678FF; color: white; }
         
+        /* カードのホバー挙動 */
         .project-card { cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: block; }
         .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important; color: inherit; }
         .project-thumb { height: 200px; object-fit: cover; width: 100%; border-bottom: 1px solid #eee; }
         
-        /* H2の下線をアクセントカラーに変更 */
-        h2 { border-bottom: 5px solid #C4FDFF; display: inline-block; padding-bottom: 10px; margin-bottom: 40px; }
+        /* ▼ H2の下線をアクセントカラーに変更 */
+        h2 { border-bottom: 3px solid #8678FF; display: inline-block; padding-bottom: 10px; margin-bottom: 40px; }
         
-        /* スキルバッジのカスタムスタイル（薄い色なので文字は黒くする） */
-        .badge-accent { background-color: #C4FDFF; color: #212529; border: 1px solid #b6eff2; }
+        /* ▼ バッジのカスタムスタイル (白文字が見やすい) */
+        .badge-accent { background-color: #8678FF; color: white; }
     </style>
 </head>
 <body>
@@ -42,7 +43,7 @@
         </div>
     </nav>
 
-    <header class="bg-accent text-center py-5">
+    <header class="bg-accent text-white text-center py-5">
         <div class="container py-4">
             <h1 class="display-4 fw-bold">Game Developer Portfolio</h1>
             <p class="lead mt-3">パフォーマンスへのこだわりと、チームを導くリーダーシップ。<br>ゲーム開発で培った技術力をWebエンジニアとしてのキャリアへ。</p>
@@ -137,4 +138,50 @@
             
             <div class="col-md-4">
                 <a href="project-dx12.html" class="project-card card h-100 shadow-sm">
-                    <img src="
+                    <img src="https://assets.st-note.com/img/1764927657-tVIkaij9pNeYcgl7M0uQn2Ew.png?width=1200" class="project-thumb" alt="DirectX12">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">DirectX12 独自エンジン</h5>
+                        <p class="card-text small text-secondary">ロード時間短縮とG-Buffer描画</p>
+                        <div class="mt-2">
+                            <span class="badge bg-secondary">C++</span> <span class="badge bg-secondary">DirectX12</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="project-unity.html" class="project-card card h-100 shadow-sm">
+                    <img src="https://i9.ytimg.com/vi_webp/Pn9zWLm94hQ/mq1.webp?sqp=CLjYk8oG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGCggTyh_MA8=&rs=AOn4CLCzW5BMLwvCic6XaOMl-zgDhMyYJw" class="project-thumb" alt="Unity VFX">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">世界観再現とVFX演出</h5>
+                        <p class="card-text small text-secondary">VFX Graphによる表現とカメラ制御</p>
+                        <div class="mt-2">
+                            <span class="badge bg-secondary">Unity</span> <span class="badge bg-secondary">HDRP</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="project-team.html" class="project-card card h-100 shadow-sm">
+                    <img src="https://i9.ytimg.com/vi_webp/tp1DYY_PXnY/mq2.webp?sqp=CIzWk8oG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgWyhKMA8=&rs=AOn4CLBv3Xa4gQzZ9JaAm4XuE-fHwNr-nA" class="project-thumb" alt="Team Project">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">チーム開発（リード）</h5>
+                        <p class="card-text small text-secondary">探索型3Dゲーム「笑撃の一瞬」</p>
+                        <div class="mt-2">
+                            <span class="badge bg-secondary">Team Dev</span> <span class="badge bg-secondary">C#</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <small>&copy; 2025 Meika Minami.</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
