@@ -5,36 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Project - Meika Minami</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 動画サイズ調整 */
+        .video-wrapper {
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        /* 役割カードのデザイン */
+        .role-card {
+            background-color: #f8f9fa;
+            border-left: 5px solid #ffc107; /* チームカラー（黄色イメージ） */
+            padding: 20px;
+            height: 100%;
+        }
+        
+        /* プロセスフローのデザイン */
+        .process-step {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            border-left: 2px solid #dee2e6;
+        }
+        .process-step strong { color: #0d6efd; }
+        
+        .section-divider {
+            border-top: 1px dashed #dee2e6;
+            margin: 40px 0;
+        }
+        .game-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body class="bg-light">
-    <nav class="navbar navbar-dark bg-dark">
+
+    <nav class="navbar navbar-dark bg-dark sticky-top">
         <div class="container"><a class="navbar-brand" href="index.html">&larr; Back to Top</a></div>
     </nav>
 
     <div class="container my-5">
-        <div class="bg-white p-5 rounded shadow-sm">
-            <h1 class="fw-bold mb-3">リードエンジニアとしてのチーム開発</h1>
-            <p class="text-muted border-bottom pb-3">Unity / C# / メンバー: 7名</p>
-
-            <div class="ratio ratio-16x9 mb-4 bg-dark">
-                <iframe src="https://www.youtube.com/embed/tp1DYY_PXnY" allowfullscreen></iframe>
-            </div>
-
-            <h3 class="h5 fw-bold mt-4">マネジメントと技術統合</h3>
-            <p>
-                探索型3Dゲーム『笑撃の一瞬』にてリードエンジニアを担当。
-                Git/GitHubを用いた開発フローを策定し、コンフリクト時の解決やコードレビューを主導しました。
-            </p>
-            <p>
-                <strong>技術的課題の解決:</strong> 600以上のマテリアルを一括管理するエディタ拡張ツールを自作し、作業効率を劇的に改善。
-                バグの原因特定から修正方針の決定までを主導し、プロジェクトを完遂させました。
-            </p>
+        <div class="bg-white p-4 p-md-5 rounded shadow-sm">
             
-            <div class="mt-4 text-center">
-                <img src="https://assets.st-note.com/img/1750070608-tXKuIJcOsnLgyp2Qemz1TjSZ.png?width=1200" class="img-fluid rounded border" style="max-height:400px;">
+            <div class="text-center mb-5">
+                <span class="badge bg-warning text-dark mb-2">Team Development</span>
+                <h1 class="fw-bold mb-3">リードエンジニアとしてのチーム開発</h1>
+                <div class="d-flex justify-content-center gap-2 flex-wrap">
+                    <span class="badge bg-secondary">Unity</span>
+                    <span class="badge bg-secondary">C#</span>
+                    <span class="badge bg-secondary">Git/GitHub</span>
+                    <span class="badge bg-light text-dark border">メンバー: 7名 (エンジニア3名)</span>
+                </div>
             </div>
 
-            <div class="mt-5 text-center"><a href="index.html" class="btn btn-primary px-5">トップページに戻る</a></div>
+            <div class="video-wrapper mb-5">
+                <div class="ratio ratio-16x9 shadow rounded bg-dark">
+                    <iframe src="https://www.youtube.com/embed/tp1DYY_PXnY" allowfullscreen></iframe>
+                </div>
+                <p class="text-center text-muted small mt-2">▲ ゲームプレイ動画「笑撃の一瞬」</p>
+            </div>
+
+            <div class="row g-5 align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h3 class="h4 fw-bold mb-3">🛡️ Management & Efficiency</h3>
+                    
+                    <div class="mb-4">
+                        <h5 class="fw-bold">開発フローの構築</h5>
+                        <p class="text-muted">
+                            Git/GitHubを用いた開発フローを策定。ブランチ運用のルール化を行い、コンフリクト時の解決やコードレビューを主導することで、コード品質とチームの開発スピードを担保しました。
+                        </p>
+                    </div>
+
+                    <div class="role-card rounded">
+                        <h5 class="fw-bold">🔧 技術的な課題解決</h5>
+                        <p class="mb-2"><strong>課題:</strong> 600個以上のマテリアル設定が必要となり、手作業でのミスと工数が懸念された。</p>
+                        <p class="mb-0"><strong>解決:</strong> Unityエディタ拡張ツールを自作し、一括設定・変更を可能に。作業時間を大幅に短縮し、ヒューマンエラーを根絶しました。</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <img src="https://assets.st-note.com/img/1750070608-tXKuIJcOsnLgyp2Qemz1TjSZ.png?width=1200" class="game-img" alt="Game Screenshot">
+                    <p class="text-center text-muted small mt-2">探索型3Dゲーム『笑撃の一瞬』</p>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="h4 fw-bold mb-4">🤝 Integration & Problem Solving</h3>
+                    <p class="mb-4">
+                        本プロジェクトは、各メンバーが作成した素材やプログラムを、私が管理するUnityプロジェクトへ集約・統合する方式を採用しました。
+                        統合時に発生する不具合に対して、以下のようなプロセスで対応しました。
+                    </p>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 bg-light p-3">
+                        <h5 class="h6 fw-bold text-primary">STEP 1: 原因分析</h5>
+                        <p class="small text-muted mb-0">
+                            他メンバーの素材に問題がある際、ただ差し戻すのではなく、コードベースで根本原因を分析。「なぜ動かないか」を特定します。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 bg-light p-3">
+                        <h5 class="h6 fw-bold text-primary">STEP 2: コミュニケーション</h5>
+                        <p class="small text-muted mb-0">
+                            エンジニア以外のメンバーにも伝わるよう言語化し、修正の方向性と具体的な納期を明確に伝え、合意形成を図りました。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 bg-light p-3">
+                        <h5 class="h6 fw-bold text-primary">STEP 3: 解決力向上</h5>
+                        <p class="small text-muted mb-0">
+                            議論を通じて3Dモデル制作や他領域の仕様理解が深まり、最終的には多くの不具合を一人で即座に修正・対応できるスキルを習得しました。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 pt-4 text-center border-top">
+                <p class="mb-4">ご覧いただきありがとうございました</p>
+                <a href="index.html" class="btn btn-primary px-5 py-2">ポートフォリオトップへ戻る</a>
+            </div>
+
         </div>
     </div>
 </body>
