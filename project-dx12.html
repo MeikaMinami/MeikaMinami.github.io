@@ -23,7 +23,7 @@
 
             <h3 class="h5 fw-bold mt-4">技術的な取り組み</h3>
             <p>
-                FBX形式のロード時間を短縮するため、メモリ効率を最適化した独自のバイナリ形式を開発しました。
+                ①FBX形式のロード時間を短縮するため、メモリ効率を最適化した独自のバイナリ形式を開発しました。
                 これにより、<strong>ロード時間を約10秒から3秒へ短縮</strong>し、ファイルサイズを95%削減しました。
             </p>
 
@@ -32,12 +32,30 @@
             </div>
             
             <p>
-                また、レンダリングパイプラインには<strong>ディファードレンダリング</strong>を採用。
+                ②レンダリングパイプラインには<strong>ディファードレンダリング</strong>を採用。
                 G-Bufferを構築し、ライティング計算を分離することで、大量の光源処理を高パフォーマンスで実現しています。
             </p>
 
             <div class="mt-4 text-center">
             <img src="https://assets.st-note.com/img/1765260763-ih2sdZTUFKxYIOf9Hnvpr8RA.png?width=1200" class="img-fluid rounded border" style="max-height:400px;">
+            </div>
+
+            <p>
+                ③-1.隣り合うピクセル間で深度が急激に変化する部分（＝手前と奥の境界）を検出し、アウトラインとして合成しています。
+                これにより、シーン内のオブジェクト数が増加しても描画負荷が増えることなく、安定したパフォーマンスで輪郭線を表現することに成功しました。
+            </p>
+
+            <div class="mt-4 text-center">
+            <img src="https://assets.st-note.com/img/1765354303-Huv0bOz9UlRSjtrhspNxqDde.png?width=1200" class="img-fluid rounded border" style="max-height:400px;">
+            </div>
+
+            <p>
+                ③-2.モデルの形状に関わらず、汚れや模様をシールのように貼り付ける「デカール描画」を実装しました。
+                これは空間に配置した箱状の領域と、画面の深度情報を活用して物体の3次元位置を特定し、プロジェクターのようにテクスチャを投影する仕組みです。
+            </p>
+
+            <div class="mt-4 text-center">
+            <img src="https://assets.st-note.com/img/1765271339-5jsWBY92dGiU7eaEu6mHpzMx.png?width=1200" class="img-fluid rounded border" style="max-height:400px;">
             </div>
             
             <div class="mt-5 text-center">
