@@ -7,11 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { font-family: "Helvetica Neue", Arial, sans-serif; color: #333; padding-top: 56px; }
-        .section-padding { padding: 60px 0; }
+        .section-padding { padding: 80px 0; }
         .bg-light-gray { background-color: #f8f9fa; }
         .project-card { cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: block; }
         .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important; color: inherit; }
         .project-thumb { height: 200px; object-fit: cover; width: 100%; border-bottom: 1px solid #eee; }
+        .profile-icon { width: 100px; height: 100px; background-color: #e9ecef; border-radius: 50%; margin-bottom: 20px; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; font-size: 2rem; color: #6c757d;}
+        h2 { border-bottom: 3px solid #0d6efd; display: inline-block; padding-bottom: 10px; margin-bottom: 40px; }
     </style>
 </head>
 <body>
@@ -19,24 +21,109 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">Meika Minami</a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="#about">About</a>
-                <a class="nav-link" href="#skills">Skills</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#skills">Skills</a>
+                    <a class="nav-link" href="#projects">Projects</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <header class="bg-primary text-white text-center py-5">
-        <div class="container">
+        <div class="container py-4">
             <h1 class="display-4 fw-bold">Game Developer Portfolio</h1>
-            <p class="lead mt-3">DirectX / C++ / Unity での技術的挑戦とアウトプット</p>
+            <p class="lead mt-3">パフォーマンスへのこだわりと、チームを導くリーダーシップ。<br>ゲーム開発で培った技術力をWebエンジニアとしてのキャリアへ。</p>
         </div>
     </header>
+
+    <section id="about" class="section-padding container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2>About Me</h2>
+                <h4 class="fw-bold mb-3">技術的な探究心と、<br>チーム開発での完遂力。</h4>
+                <p>
+                    大阪出身のゲーム開発者です。大学ではC++やDirectXを用いたローレイヤーのグラフィックス処理を中心に学んできました。
+                    「なぜ動くのか」「どうすれば0.1秒速くなるか」といった根本的な仕組みへの興味が強く、独自エンジンの開発にも挑戦しています。
+                </p>
+                <p>
+                    チーム制作ではリードエンジニアを務めることが多く、コードの品質管理やメンバー間の技術的な橋渡し役を得意としています。
+                    現在は、ゲーム開発で培った「パフォーマンス意識」と「複雑なシステムの設計能力」を活かし、大規模なデータを扱うWebアプリケーション開発（バックエンド/インフラ領域）への転向を目指しています。
+                </p>
+                <div class="mt-4 p-3 bg-light rounded border">
+                    <ul class="list-unstyled mb-0 row">
+                        <li class="col-6 mb-2"><strong>📍 出身:</strong> 大阪府</li>
+                        <li class="col-6 mb-2"><strong>🎨 性格:</strong> 好奇心旺盛・クリエイティブ</li>
+                        <li class="col-6 mb-2"><strong>💪 長所:</strong> 粘り強い探究心</li>
+                        <li class="col-6 mb-2"><strong>🎵 趣味:</strong> DJ/VJ鑑賞・SoundCloud</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1 mt-5 mt-lg-0 text-center">
+                <div class="card border-0 shadow-sm bg-light-gray p-4">
+                    <h5 class="fw-bold mb-3">Core Values</h5>
+                    <p class="text-start small text-muted">私が開発において大切にしていること：</p>
+                    <ul class="text-start">
+                        <li class="mb-2"><strong>Optimization:</strong> メモリ管理や処理速度の最適化へのこだわり</li>
+                        <li class="mb-2"><strong>User Experience:</strong> 技術を技術で終わらせず、感動体験へ繋げる</li>
+                        <li class="mb-2"><strong>Teamwork:</strong> バージョン管理とコードレビューによる品質担保</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="bg-light-gray section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="mb-5">Technical Skills</h2>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm p-3">
+                        <h5 class="fw-bold">Languages</h5>
+                        <div class="mt-2">
+                            <span class="badge bg-dark m-1 p-2">C++</span>
+                            <span class="badge bg-dark m-1 p-2">C#</span>
+                            <span class="badge bg-dark m-1 p-2">C</span>
+                            <span class="badge bg-dark m-1 p-2">Python</span>
+                            <span class="badge bg-dark m-1 p-2">HLSL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm p-3">
+                        <h5 class="fw-bold">Graphics / Tools</h5>
+                        <div class="mt-2">
+                            <span class="badge bg-primary m-1 p-2">DirectX 11/12</span>
+                            <span class="badge bg-primary m-1 p-2">Unity (HDRP)</span>
+                            <span class="badge bg-primary m-1 p-2">ShaderGraph</span>
+                            <span class="badge bg-primary m-1 p-2">Maya / Houdini</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm p-3">
+                        <h5 class="fw-bold">Dev Environment</h5>
+                        <div class="mt-2">
+                            <span class="badge bg-secondary m-1 p-2">Git / GitHub</span>
+                            <span class="badge bg-secondary m-1 p-2">Visual Studio</span>
+                            <span class="badge bg-secondary m-1 p-2">Team Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="projects" class="section-padding container">
         <div class="text-center mb-5">
             <h2>Selected Projects</h2>
-            <p class="text-muted">各カードをクリックすると詳細ページへ移動します</p>
+            <p class="text-muted">画像をクリックすると詳細ページへ移動します</p>
         </div>
         <div class="row g-4">
             
@@ -46,7 +133,9 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">DirectX12 独自エンジン</h5>
                         <p class="card-text small text-secondary">ロード時間短縮とG-Buffer描画</p>
-                        <span class="badge bg-secondary">C++</span> <span class="badge bg-secondary">DirectX12</span>
+                        <div class="mt-2">
+                            <span class="badge bg-secondary">C++</span> <span class="badge bg-secondary">DirectX12</span>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -57,7 +146,9 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">世界観再現とVFX演出</h5>
                         <p class="card-text small text-secondary">VFX Graphによる表現とカメラ制御</p>
-                        <span class="badge bg-secondary">Unity</span> <span class="badge bg-secondary">HDRP</span>
+                        <div class="mt-2">
+                            <span class="badge bg-secondary">Unity</span> <span class="badge bg-secondary">HDRP</span>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -68,7 +159,9 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">チーム開発（リード）</h5>
                         <p class="card-text small text-secondary">探索型3Dゲーム「笑撃の一瞬」</p>
-                        <span class="badge bg-secondary">Team Dev</span>
+                        <div class="mt-2">
+                            <span class="badge bg-secondary">Team Dev</span> <span class="badge bg-secondary">C#</span>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -76,27 +169,10 @@
         </div>
     </section>
 
-    <section id="about" class="bg-light-gray section-padding">
-        <div class="container">
-            <h2 class="mb-4 text-center">About & Skills</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <p>大阪出身のゲーム開発者です。「ユーザー体験」と「パフォーマンス」の両立を意識して開発を行っています。</p>
-                    <div class="mt-3">
-                        <span class="badge bg-dark me-1">C++</span>
-                        <span class="badge bg-dark me-1">C#</span>
-                        <span class="badge bg-dark me-1">DirectX 12</span>
-                        <span class="badge bg-dark me-1">Unity</span>
-                        <span class="badge bg-dark me-1">Python</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <small>&copy; 2025 Meika Minami.</small>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
