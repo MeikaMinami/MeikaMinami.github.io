@@ -6,39 +6,22 @@
     <title>Meika Minami - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* スムーススクロール（クリックでスルスルっと移動する設定） */
-        html { scroll-behavior: smooth; }
         body { font-family: "Helvetica Neue", Arial, sans-serif; color: #333; padding-top: 56px; }
         .section-padding { padding: 60px 0; }
         .bg-light-gray { background-color: #f8f9fa; }
-        
-        /* 作品カード（クリックできる感の演出） */
-        .project-card { cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
-        .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important; }
+        .project-card { cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: block; }
+        .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important; color: inherit; }
         .project-thumb { height: 200px; object-fit: cover; width: 100%; border-bottom: 1px solid #eee; }
-        
-        /* 詳細セクションのデザイン */
-        .detail-section { padding-top: 80px; margin-top: -20px; border-bottom: 1px solid #eee; padding-bottom: 60px; }
-        .detail-img { width: 100%; max-height: 400px; object-fit: contain; background: #000; margin-bottom: 20px; border-radius: 8px; }
-        
-        /* スキルバッジ */
-        .skill-badge { font-size: 0.9rem; margin: 3px; }
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Meika Minami</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects-index">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                </ul>
+            <a class="navbar-brand" href="index.html">Meika Minami</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#skills">Skills</a>
             </div>
         </div>
     </nav>
@@ -50,48 +33,42 @@
         </div>
     </header>
 
-    <section id="projects-index" class="section-padding container">
+    <section id="projects" class="section-padding container">
         <div class="text-center mb-5">
             <h2>Selected Projects</h2>
-            <p class="text-muted">クリックすると詳細・動画へ移動します</p>
+            <p class="text-muted">各カードをクリックすると詳細ページへ移動します</p>
         </div>
         <div class="row g-4">
             
             <div class="col-md-4">
-                <a href="#detail-dx12" class="text-decoration-none text-dark">
-                    <div class="card h-100 shadow-sm project-card">
-                        <img src="https://assets.st-note.com/img/1764927657-tVIkaij9pNeYcgl7M0uQn2Ew.png?width=1200" class="project-thumb" alt="DirectX12">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">DirectX12 独自エンジン</h5>
-                            <p class="card-text small text-secondary">ロード時間短縮とG-Buffer描画</p>
-                            <span class="badge bg-secondary">C++</span> <span class="badge bg-secondary">DirectX12</span>
-                        </div>
+                <a href="project-dx12.html" class="project-card card h-100 shadow-sm">
+                    <img src="【ここにNoteのDirectX画像URL】" class="project-thumb" alt="DirectX12">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">DirectX12 独自エンジン</h5>
+                        <p class="card-text small text-secondary">ロード時間短縮とG-Buffer描画</p>
+                        <span class="badge bg-secondary">C++</span> <span class="badge bg-secondary">DirectX12</span>
                     </div>
                 </a>
             </div>
 
             <div class="col-md-4">
-                <a href="#detail-unity" class="text-decoration-none text-dark">
-                    <div class="card h-100 shadow-sm project-card">
-                        <img src="https://assets.st-note.com/img/1749881293-eG0By2ZJ1zvS8hpWVP7iqfbM.png?width=1200" class="project-thumb" alt="Unity VFX">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">世界観再現とVFX演出</h5>
-                            <p class="card-text small text-secondary">VFX Graphによる表現とカメラ制御</p>
-                            <span class="badge bg-secondary">Unity</span> <span class="badge bg-secondary">HDRP</span>
-                        </div>
+                <a href="project-unity.html" class="project-card card h-100 shadow-sm">
+                    <img src="【ここにNoteのLittleNightmares画像URL】" class="project-thumb" alt="Unity VFX">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">世界観再現とVFX演出</h5>
+                        <p class="card-text small text-secondary">VFX Graphによる表現とカメラ制御</p>
+                        <span class="badge bg-secondary">Unity</span> <span class="badge bg-secondary">HDRP</span>
                     </div>
                 </a>
             </div>
 
             <div class="col-md-4">
-                <a href="#detail-team" class="text-decoration-none text-dark">
-                    <div class="card h-100 shadow-sm project-card">
-                        <img src="https://assets.st-note.com/img/1750070608-tXKuIJcOsnLgyp2Qemz1TjSZ.png?width=1200" class="project-thumb" alt="Team Project">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">チーム開発（リード）</h5>
-                            <p class="card-text small text-secondary">探索型3Dゲーム「笑撃の一瞬」</p>
-                            <span class="badge bg-secondary">Team Dev</span> <span class="badge bg-secondary">Management</span>
-                        </div>
+                <a href="project-team.html" class="project-card card h-100 shadow-sm">
+                    <img src="【ここにNoteのチーム制作画像URL】" class="project-thumb" alt="Team Project">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">チーム開発（リード）</h5>
+                        <p class="card-text small text-secondary">探索型3Dゲーム「笑撃の一瞬」</p>
+                        <span class="badge bg-secondary">Team Dev</span>
                     </div>
                 </a>
             </div>
@@ -99,116 +76,20 @@
         </div>
     </section>
 
-    <hr>
-
-    <div class="bg-light-gray pb-5">
-        
-        <section id="detail-dx12" class="container detail-section">
-            <h2 class="fw-bold mb-3">DirectX12 独自3Dフォーマット・エンジンの開発</h2>
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="ratio ratio-16x9 mb-4 shadow bg-dark rounded">
-                        <iframe src="https://www.youtube.com/embed/tp1DYY_PXnY" title="YouTube video" allowfullscreen></iframe>
+    <section id="about" class="bg-light-gray section-padding">
+        <div class="container">
+            <h2 class="mb-4 text-center">About & Skills</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p>大阪出身のゲーム開発者です。「ユーザー体験」と「パフォーマンス」の両立を意識して開発を行っています。</p>
+                    <div class="mt-3">
+                        <span class="badge bg-dark me-1">C++</span>
+                        <span class="badge bg-dark me-1">C#</span>
+                        <span class="badge bg-dark me-1">DirectX 12</span>
+                        <span class="badge bg-dark me-1">Unity</span>
+                        <span class="badge bg-dark me-1">Python</span>
                     </div>
-                    <h5 class="fw-bold">技術的アピールポイント</h5>
-                    <p>
-                        FBX形式はデータが分散しており読み込みに時間がかかるため、メモリ配置を最適化した独自のバイナリ形式へのコンバーターを作成しました。
-                        これにより、<strong>ロード時間を約10秒→3秒へ短縮</strong>し、ファイルサイズを95%削減しました。
-                    </p>
-                    <p>
-                        また、レンダリングパイプラインには<strong>ディファードレンダリング</strong>を採用。
-                        G-Buffer（ジオメトリ情報のバッファ）を構築し、ライティング計算を分離することで、大量の光源やデカール描画を高パフォーマンスで実現しています。
-                    </p>
                 </div>
-                <div class="col-lg-5">
-                    <img src="【ここにNoteのDirectX画像URL】" class="img-fluid rounded shadow-sm mb-3" alt="Tech Diagram">
-                    <ul class="list-group">
-                        <li class="list-group-item"><strong>制作時間:</strong> 約100時間</li>
-                        <li class="list-group-item"><strong>言語:</strong> C++ / HLSL</li>
-                        <li class="list-group-item"><strong>API:</strong> DirectX 12</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="detail-unity" class="container detail-section">
-            <h2 class="fw-bold mb-3">Little Nightmares II 世界観・カメラ演出の再現</h2>
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="ratio ratio-16x9 mb-4 shadow bg-dark rounded">
-                        <iframe src="https://www.youtube.com/embed/Pn9zWLm94hQ" title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                    <h5 class="fw-bold">こだわりの実装</h5>
-                    <p>
-                        「不安感」を演出するため、カメラがプレイヤーに即座に追従するのではなく、あえて遅延を持たせる制御を実装しました。
-                        狭い部屋や広い廊下など、エリアごとにカメラの挙動（移動・回転の制限）をステート管理し、シームレスに切り替えています。
-                    </p>
-                    <p>
-                        空気感の表現には<strong>Unity HDRP</strong>と<strong>VFX Graph</strong>を使用。
-                        従来のパーティクルシステムではなくGPUパーティクル（VFX Graph）を採用することで、数万個の埃の粒子を物理挙動させ、リアルな空気の澱みを表現しました。
-                    </p>
-                </div>
-                <div class="col-lg-5">
-                    <img src="【ここにNoteのLittleNightmares画像URL】" class="img-fluid rounded shadow-sm mb-3" alt="Unity Scene">
-                    <ul class="list-group">
-                        <li class="list-group-item"><strong>制作時間:</strong> 約60時間</li>
-                        <li class="list-group-item"><strong>エンジン:</strong> Unity (HDRP)</li>
-                        <li class="list-group-item"><strong>技術:</strong> VFX Graph, C#</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="detail-team" class="container detail-section">
-            <h2 class="fw-bold mb-3">リードエンジニアとしてのチーム開発「笑撃の一瞬」</h2>
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="ratio ratio-16x9 mb-4 shadow bg-dark rounded">
-                        <iframe src="https://www.youtube.com/embed/tp1DYY_PXnY" title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                    <h5 class="fw-bold">マネジメントと技術統合</h5>
-                    <p>
-                        7名（エンジニア3名）のチームでリードエンジニアを担当。
-                        Git/GitHubを用いた開発フローを策定し、コンフリクト時の解決やコードレビューを主導しました。
-                    </p>
-                    <p>
-                        <strong>技術的課題の解決:</strong> 600以上のマテリアル管理が必要になった際、手作業によるミスを防ぐため、一括設定・変更ができるエディタ拡張ツールを自作し、作業効率を劇的に向上させました。
-                        また、他メンバーが書いたコードのバグ修正も積極的に行い、納期通りの完成に導きました。
-                    </p>
-                </div>
-                <div class="col-lg-5">
-                    <img src="【ここにNoteのチーム制作画像URL】" class="img-fluid rounded shadow-sm mb-3" alt="Team Game">
-                    <ul class="list-group">
-                        <li class="list-group-item"><strong>役割:</strong> リードプログラマー</li>
-                        <li class="list-group-item"><strong>人数:</strong> 7名</li>
-                        <li class="list-group-item"><strong>担当:</strong> 設計統合, UI, カメラ, シェーダー管理</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <section id="skills" class="section-padding container">
-        <h2 class="mb-4">Skills & About</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <h5>Technical Skills</h5>
-                <p>
-                    <span class="badge bg-dark skill-badge">C++</span>
-                    <span class="badge bg-dark skill-badge">C#</span>
-                    <span class="badge bg-dark skill-badge">DirectX 12</span>
-                    <span class="badge bg-dark skill-badge">Unity</span>
-                    <span class="badge bg-dark skill-badge">HLSL</span>
-                    <span class="badge bg-dark skill-badge">Python</span>
-                    <span class="badge bg-dark skill-badge">Git</span>
-                </div>
-            <div class="col-md-6">
-                <h5>Message</h5>
-                <p class="small text-muted">
-                    ゲーム開発で培った「低レイヤーの理解（メモリ管理・描画パイプライン）」と「チーム開発の完遂力」は、
-                    大規模Webアプリケーションのパフォーマンス改善や堅牢な設計にも活かせると確信しています。
-                </p>
             </div>
         </div>
     </section>
@@ -217,6 +98,5 @@
         <small>&copy; 2025 Meika Minami.</small>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
