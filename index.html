@@ -6,47 +6,88 @@
     <title>Meika Minami - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #f8f9fa; font-family: "Helvetica Neue", Arial, sans-serif; }
-        .hero-section { background-color: #ffffff; padding: 60px 0; border-bottom: 1px solid #e9ecef; }
-        .card { transition: transform 0.2s; }
+        body { background-color: #f8f9fa; font-family: "Helvetica Neue", Arial, sans-serif; color: #333; }
+        .hero-section { background-color: #fff; padding: 80px 0; border-bottom: 1px solid #eaeaea; }
+        .tech-badge { font-size: 0.85rem; margin-right: 5px; margin-bottom: 5px; }
+        .card { transition: transform 0.2s, box-shadow 0.2s; border: none; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .section-title { border-bottom: 2px solid #007bff; display: inline-block; padding-bottom: 5px; margin-bottom: 30px; }
     </style>
 </head>
 <body>
 
     <div class="hero-section text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Meika Minami</h1>
-            <p class="lead text-muted">Game Developer / Aspiring Web Engineer</p>
-            <p class="mt-4">
-                ゲーム開発で培った技術力をベースに、Webエンジニアとしてのキャリアを目指しています。<br>
-                技術的なアウトプットや学習の記録を以下にまとめています。
+            <h1 class="display-4 fw-bold mb-3">Meika Minami</h1>
+            <p class="lead text-muted mb-4">Game Developer / Aspiring Web Engineer</p>
+            <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+                <span class="badge bg-secondary">C++</span>
+                <span class="badge bg-secondary">C#</span>
+                <span class="badge bg-secondary">DirectX12</span>
+                <span class="badge bg-secondary">Unity</span>
+                <span class="badge bg-secondary">Python</span>
+            </div>
+            <p class="mx-auto" style="max-width: 700px;">
+                ゲーム開発における「高速化（DirectX12）」や「チーム開発のリード」経験を活かし、
+                大規模なWebアプリケーション開発でもパフォーマンスと品質を追求できるエンジニアを目指しています。
             </p>
+            <div class="mt-4">
+                <a href="https://note.com/mimimi_2525/n/n9fa70ec581ae?sub_rt=share_sb" target="_blank" class="btn btn-primary btn-lg px-5">
+                    View Full Portfolio on Note
+                </a>
+            </div>
         </div>
     </div>
 
     <div class="container my-5">
-        <h2 class="mb-4 border-bottom pb-2">Technical Articles</h2>
-        <div class="row">
+        <h2 class="h3 mb-5 fw-bold text-center">Featured Projects</h2>
+        
+        <div class="row g-4">
             
-            <div class="col-md-6 mb-4">
+            <div class="col-md-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">記事のタイトルをここに書く</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">2023.xx.xx</h6>
-                        <p class="card-text">ここに記事の簡単な要約や、技術的に頑張ったポイントを2〜3行で書きます。</p>
-                        <a href="【Noteの実際のURL】" target="_blank" class="btn btn-outline-primary btn-sm">Read on Note &rarr;</a>
+                        <h5 class="card-title fw-bold">DirectX12 独自エンジンの開発</h5>
+                        <h6 class="card-subtitle mb-3 text-muted">C++ / DirectX12 / HLSL</h6>
+                        <p class="card-text small text-secondary">
+                            FBX形式のロード時間を10秒→3秒へ短縮し、ファイルサイズを95%削減。
+                            G-Bufferを用いたディファードレンダリングを実装し、大量の光源処理とパフォーマンス維持を両立しました。
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <a href="https://note.com/mimimi_2525/n/n9fa70ec581ae?sub_rt=share_sb#3directx12を使った独自3dフォーマットの作成及びg-bufferでの表現3年後期" target="_blank" class="btn btn-outline-primary btn-sm w-100">詳細を見る (Note)</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6 mb-4">
+            <div class="col-md-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">学習記録：Webとゲーム設計の違い</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">2025.12.xx</h6>
-                        <p class="card-text">ステートレスなWeb開発と、ループ処理を行うゲーム開発のアーキテクチャの違いについて考察しました。</p>
-                        <a href="【Noteの実際のURL】" target="_blank" class="btn btn-outline-primary btn-sm">Read on Note &rarr;</a>
+                        <h5 class="card-title fw-bold">探索型3Dゲーム「笑撃の一瞬」</h5>
+                        <h6 class="card-subtitle mb-3 text-muted">Unity / C# / リードエンジニア</h6>
+                        <p class="card-text small text-secondary">
+                            7名チームのリードエンジニアとして、コード統合と品質管理を担当。
+                            他メンバーのバグ修正方針の策定や、600以上のマテリアル管理の仕組み化を行い、プロジェクトを完遂させました。
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <a href="https://note.com/mimimi_2525/n/n9fa70ec581ae?sub_rt=share_sb#4-2チーム制作笑撃の一瞬しょうげきのシャッター2年後期" target="_blank" class="btn btn-outline-primary btn-sm w-100">詳細を見る (Note)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">世界観再現とVFX演出</h5>
+                        <h6 class="card-subtitle mb-3 text-muted">Unity / VFX Graph</h6>
+                        <p class="card-text small text-secondary">
+                            既存作品（Little Nightmares II）の空気感を再現。
+                            パーティクルではなくVFX Graphを採用して「埃の自然な動き」を表現し、プレイヤー心理を誘導するカメラワークを実装しました。
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <a href="https://note.com/mimimi_2525/n/n9fa70ec581ae?sub_rt=share_sb#4-1個人制作littlenightmareⅡの世界感とカメラ演出の再現2年後期" target="_blank" class="btn btn-outline-primary btn-sm w-100">詳細を見る (Note)</a>
                     </div>
                 </div>
             </div>
@@ -54,8 +95,8 @@
         </div>
     </div>
 
-    <footer class="text-center py-4 text-muted border-top">
-        <small>&copy; 2025 Meika Minami. Hosted on GitHub Pages.</small>
+    <footer class="text-center py-4 mt-5 text-muted bg-light">
+        <small>&copy; 2025 Meika Minami. All works are documented on <a href="https://note.com/mimimi_2525/n/n9fa70ec581ae?sub_rt=share_sb">Note</a>.</small>
     </footer>
 
 </body>
