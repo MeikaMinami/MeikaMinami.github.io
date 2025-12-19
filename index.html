@@ -6,98 +6,159 @@
     <title>Meika Minami - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #f8f9fa; font-family: "Helvetica Neue", Arial, sans-serif; color: #333; }
-        .hero-section { background-color: #fff; padding: 80px 0; border-bottom: 1px solid #eaeaea; }
-        .tech-badge { font-size: 0.85rem; margin-right: 5px; margin-bottom: 5px; }
-        .card { transition: transform 0.2s, box-shadow 0.2s; border: none; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .section-title { border-bottom: 2px solid #007bff; display: inline-block; padding-bottom: 5px; margin-bottom: 30px; }
+        body { font-family: "Helvetica Neue", Arial, sans-serif; color: #333; padding-top: 56px; }
+        .section-padding { padding: 80px 0; }
+        .bg-light-gray { background-color: #f8f9fa; }
+        .skill-badge { font-size: 0.9rem; margin: 3px; }
+        .project-img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        h2 { border-bottom: 3px solid #007bff; display: inline-block; padding-bottom: 5px; margin-bottom: 40px; }
     </style>
 </head>
 <body>
 
-    <div class="hero-section text-center">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <h1 class="display-4 fw-bold mb-3">Meika Minami</h1>
-            <p class="lead text-muted mb-4">Game Developer / Aspiring Web Engineer</p>
-            <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
-                <span class="badge bg-secondary">C++</span>
-                <span class="badge bg-secondary">C#</span>
-                <span class="badge bg-secondary">DirectX12</span>
-                <span class="badge bg-secondary">Unity</span>
-                <span class="badge bg-secondary">Python</span>
-            </div>
-            <p class="mx-auto" style="max-width: 700px;">
-                ゲーム開発における「高速化（DirectX12）」や「チーム開発のリード」経験を活かし、
-                大規模なWebアプリケーション開発でもパフォーマンスと品質を追求できるエンジニアを目指しています。
-            </p>
-            <div class="mt-4">
-                <a href="https://note.com/mimimi_2525/n/n9fa70ec581ae?sub_rt=share_sb" target="_blank" class="btn btn-primary btn-lg px-5">
-                    View Full Portfolio on Note
-                </a>
+            <a class="navbar-brand" href="#">Meika Minami</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="container my-5">
-        <h2 class="h3 mb-5 fw-bold text-center">Featured Projects</h2>
-        
-        <div class="row g-4">
-            
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">DirectX12 独自エンジンの開発</h5>
-                        <h6 class="card-subtitle mb-3 text-muted">C++ / DirectX12 / HLSL</h6>
-                        <p class="card-text small text-secondary">
-                            FBX形式のロード時間を10秒→3秒へ短縮し、ファイルサイズを95%削減。
-                            G-Bufferを用いたディファードレンダリングを実装し、大量の光源処理とパフォーマンス維持を両立しました。
-                        </p>
-                    </div>
-                    <div class="card-footer bg-white border-0 pb-3">
-                        <a href="https://note.com/mimimi_2525/n/n9fa70ec581ae?sub_rt=share_sb#3directx12を使った独自3dフォーマットの作成及びg-bufferでの表現3年後期" target="_blank" class="btn btn-outline-primary btn-sm w-100">詳細を見る (Note)</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">探索型3Dゲーム「笑撃の一瞬」</h5>
-                        <h6 class="card-subtitle mb-3 text-muted">Unity / C# / リードエンジニア</h6>
-                        <p class="card-text small text-secondary">
-                            7名チームのリードエンジニアとして、コード統合と品質管理を担当。
-                            他メンバーのバグ修正方針の策定や、600以上のマテリアル管理の仕組み化を行い、プロジェクトを完遂させました。
-                        </p>
-                    </div>
-                    <div class="card-footer bg-white border-0 pb-3">
-                        <a href="https://note.com/mimimi_2525/n/n9fa70ec581ae?sub_rt=share_sb#4-2チーム制作笑撃の一瞬しょうげきのシャッター2年後期" target="_blank" class="btn btn-outline-primary btn-sm w-100">詳細を見る (Note)</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">世界観再現とVFX演出</h5>
-                        <h6 class="card-subtitle mb-3 text-muted">Unity / VFX Graph</h6>
-                        <p class="card-text small text-secondary">
-                            既存作品（Little Nightmares II）の空気感を再現。
-                            パーティクルではなくVFX Graphを採用して「埃の自然な動き」を表現し、プレイヤー心理を誘導するカメラワークを実装しました。
-                        </p>
-                    </div>
-                    <div class="card-footer bg-white border-0 pb-3">
-                        <a href="https://note.com/mimimi_2525/n/n9fa70ec581ae?sub_rt=share_sb#4-1個人制作littlenightmareⅡの世界感とカメラ演出の再現2年後期" target="_blank" class="btn btn-outline-primary btn-sm w-100">詳細を見る (Note)</a>
-                    </div>
-                </div>
-            </div>
-
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Game Developer to Web Engineer</h1>
+            <p class="lead mt-3">C++ / DirectX / Unity で培った技術力を、Webの世界へ。</p>
         </div>
-    </div>
+    </header>
 
-    <footer class="text-center py-4 mt-5 text-muted bg-light">
-        <small>&copy; 2025 Meika Minami. All works are documented on <a href="https://note.com/mimimi_2525/n/n9fa70ec581ae?sub_rt=share_sb">Note</a>.</small>
+    <section id="about" class="section-padding container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="mb-4">About Me</h2>
+                <p>
+                    大阪出身のゲーム開発者です。好奇心が強く、新しい技術への探求心を大切にしています。<br>
+                    ゲーム制作では「ユーザー体験」と「パフォーマンス」の両立を常に意識してきました。
+                    現在はその技術的バックグラウンドを活かし、大規模なデータを扱うWebアプリケーション開発（バックエンド/インフラ）に挑戦したいと考えています。
+                </p>
+                <table class="table table-bordered mt-4">
+                    <tr><th class="bg-light w-25">性格</th><td>好奇心旺盛、クリエイティブ</td></tr>
+                    <tr><th class="bg-light">長所</th><td>探求心が強い、人を思いやる気持ち</td></tr>
+                    <tr><th class="bg-light">趣味</th><td>DJ・VJイベント鑑賞、SoundCloud掘り、インターネット巡回</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section-padding bg-light-gray">
+        <div class="container">
+            <div class="text-center"><h2 class="mb-5">Technical Skills</h2></div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Languages</h5>
+                            <hr>
+                            <span class="badge bg-primary skill-badge">C++</span>
+                            <span class="badge bg-primary skill-badge">C#</span>
+                            <span class="badge bg-primary skill-badge">C</span>
+                            <span class="badge bg-primary skill-badge">Python</span>
+                            <span class="badge bg-primary skill-badge">HLSL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Graphics / Engine</h5>
+                            <hr>
+                            <span class="badge bg-success skill-badge">DirectX 11/12</span>
+                            <span class="badge bg-success skill-badge">Unity</span>
+                            <span class="badge bg-success skill-badge">ShaderGraph</span>
+                            <span class="badge bg-success skill-badge">Deferred Rendering</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Tools</h5>
+                            <hr>
+                            <span class="badge bg-secondary skill-badge">Git / GitHub</span>
+                            <span class="badge bg-secondary skill-badge">Visual Studio</span>
+                            <span class="badge bg-secondary skill-badge">Maya</span>
+                            <span class="badge bg-secondary skill-badge">Houdini</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding container">
+        <div class="text-center"><h2 class="mb-5">Featured Projects</h2></div>
+
+        <div class="row mb-5 align-items-center">
+            <div class="col-md-6">
+                <img src="https://assets.st-note.com/img/1764927657-tVIkaij9pNeYcgl7M0uQn2Ew.png?width=1200" alt="DirectX12 Project" class="project-img">
+            </div>
+            <div class="col-md-6">
+                <h3 class="fw-bold">DirectX12 独自3Dフォーマット・エンジン開発</h3>
+                <p class="text-muted">制作時間: 約100時間 / 使用技術: C++, DirectX12</p>
+                <p>
+                    <strong>概要:</strong> FBX形式のロード時間を短縮するため、メモリ効率を最適化した独自のバイナリ形式を開発しました。<br>
+                    <strong>成果:</strong> ロード時間を約10秒から3秒へ短縮。ファイルサイズを95%削減。<br>
+                    <strong>技術詳細:</strong> G-Bufferを用いたディファードレンダリングを採用し、大量の光源やアウトライン描画を低負荷で実現しました。Web開発における「大量データの高速処理」や「非同期処理」に通じる設計思想です。
+                </p>
+            </div>
+        </div>
+        <hr class="my-5">
+
+        <div class="row mb-5 align-items-center">
+            <div class="col-md-6 order-md-2">
+                <img src="https://assets.st-note.com/img/1749881293-eG0By2ZJ1zvS8hpWVP7iqfbM.png?width=1200" alt="Unity Project" class="project-img">
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h3 class="fw-bold">世界観とカメラ演出の再現（Unity）</h3>
+                <p class="text-muted">制作時間: 約60時間 / 使用技術: Unity(HDRP), VFX Graph</p>
+                <p>
+                    <strong>概要:</strong> 『Little Nightmares II』の特有の空気感を、HDRPのライティングとVFX Graphによる埃の表現で再現しました。<br>
+                    <strong>こだわり:</strong> プレイヤーの不安感を煽るため、追従に遅れを持たせたカメラワークを実装。ステート管理を行い、エリアごとに最適な挙動へ切り替えるロジックを構築しました。
+                </p>
+            </div>
+        </div>
+        <hr class="my-5">
+
+        <div class="row mb-5 align-items-center">
+            <div class="col-md-6">
+                <img src="https://assets.st-note.com/img/1750070608-tXKuIJcOsnLgyp2Qemz1TjSZ.png?width=1200" alt="Team Project" class="project-img">
+            </div>
+            <div class="col-md-6">
+                <h3 class="fw-bold">リードエンジニアとしてのチーム開発</h3>
+                <p class="text-muted">役割: リードプログラマー / メンバー: 7名</p>
+                <p>
+                    <strong>概要:</strong> 探索型3Dゲーム『笑撃の一瞬』の開発において、技術選定とコードの統合管理を担当しました。<br>
+                    <strong>マネジメント:</strong> Gitを用いたバージョン管理ルールを策定。メンバーのコードレビューを行い、バグの原因特定から修正方針の決定までを主導しました。<br>
+                    <strong>貢献:</strong> 600以上のマテリアルを一括管理する仕組みを作り、作業効率を劇的に改善させました。
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Meika Minami. All rights reserved.</p>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
