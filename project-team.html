@@ -6,6 +6,12 @@
     <title>Team Project - Meika Minami</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* ▼ テーマカラー (#8678FF) の定義 */
+        .text-accent { color: #8678FF !important; }
+        .bg-accent { background-color: #8678FF !important; color: white; }
+        .btn-accent { background-color: #8678FF; color: white; border: none; }
+        .btn-accent:hover { background-color: #7262ea; color: white; }
+
         /* 動画サイズ調整 */
         .video-wrapper {
             max-width: 700px;
@@ -13,22 +19,13 @@
             margin: 0 auto;
         }
         
-        /* 役割カードのデザイン */
+        /* 役割カードのデザイン（ここは黄色のままにします） */
         .role-card {
             background-color: #f8f9fa;
-            border-left: 5px solid #ffc107; /* チームカラー（黄色イメージ） */
+            border-left: 5px solid #ffc107; /* チームカラー */
             padding: 20px;
             height: 100%;
         }
-        
-        /* プロセスフローのデザイン */
-        .process-step {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 15px;
-            border-left: 2px solid #dee2e6;
-        }
-        .process-step strong { color: #0d6efd; }
         
         .section-divider {
             border-top: 1px dashed #dee2e6;
@@ -106,7 +103,7 @@
 
                 <div class="col-md-4 mb-3">
                     <div class="card h-100 border-0 bg-light p-3">
-                        <h5 class="h6 fw-bold text-primary">STEP 1: 原因分析</h5>
+                        <h5 class="h6 fw-bold text-accent">STEP 1: 原因分析</h5>
                         <p class="small text-muted mb-0">
                             他メンバーの素材に問題がある際、ただ差し戻すのではなく、コードベースで根本原因を分析。「なぜ動かないか」を特定します。
                         </p>
@@ -114,7 +111,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card h-100 border-0 bg-light p-3">
-                        <h5 class="h6 fw-bold text-primary">STEP 2: コミュニケーション</h5>
+                        <h5 class="h6 fw-bold text-accent">STEP 2: コミュニケーション</h5>
                         <p class="small text-muted mb-0">
                             エンジニア以外のメンバーにも伝わるよう言語化し、修正の方向性と具体的な納期を明確に伝え、合意形成を図りました。
                         </p>
@@ -122,7 +119,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card h-100 border-0 bg-light p-3">
-                        <h5 class="h6 fw-bold text-primary">STEP 3: 解決力向上</h5>
+                        <h5 class="h6 fw-bold text-accent">STEP 3: 解決力向上</h5>
                         <p class="small text-muted mb-0">
                             議論を通じて3Dモデル制作や他領域の仕様理解が深まり、最終的には多くの不具合を一人で即座に修正・対応できるスキルを習得しました。
                         </p>
@@ -132,7 +129,7 @@
 
             <div class="mt-5 pt-4 text-center border-top">
                 <p class="mb-4">ご覧いただきありがとうございました</p>
-                <a href="index.html" class="btn btn-primary px-5 py-2">ポートフォリオトップへ戻る</a>
+                <a href="index.html" class="btn btn-accent px-5 py-2">ポートフォリオトップへ戻る</a>
             </div>
 
         </div>
